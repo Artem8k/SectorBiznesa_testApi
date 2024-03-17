@@ -1,14 +1,15 @@
 import { Sequelize } from "sequelize-typescript";
 import { UserModel } from "./models/user.model";
+import 'dotenv/config'
 
 export function runDatabase(){
   const sequalize = new Sequelize({
-    dialect: "postgres",
-    host: "titania.bluerats.ru",
-    port: 5432,
-    username: "viportal",
-    password: "78978464648646vi",
-    database: "testZadanie",
+    dialect: "mysql",
+    host: process.env.DB_HOST,
+    port: 3306,
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
     models: [UserModel],
     pool: {
       max: 5,

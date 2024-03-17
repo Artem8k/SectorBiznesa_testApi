@@ -17,7 +17,7 @@ export type User = {
   tableName: "User"
 })
 export class UserModel extends Model<User> {
-  @Column({type: DataType.UUIDV4, primaryKey: true})
+  @Column({type: DataType.STRING, primaryKey: true})
   id: string;
 
   @Column(DataType.STRING)
@@ -33,7 +33,7 @@ export class UserModel extends Model<User> {
   password: string;
 
   @Column(DataType.STRING)
-  sex: string;
+  gender: string;
 
   @Column(DataType.STRING)
   photoPath: string;

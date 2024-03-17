@@ -1,8 +1,8 @@
 export type profileChangeDto = {
-  id: string,
+  token: string,
   name?: string,
   secondName?: string,
   email?: string,
-  sex?: 'Мужской' | 'Женский',
-  photo?: string,
+  gender?: 'Мужской' | 'Женский',
+  photoPath?: string,
 }
