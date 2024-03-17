@@ -2,7 +2,6 @@ import { Response, Router } from "express";
 import { UserService } from "../services/userService";
 import { body, validationResult } from "express-validator";
 import { Request } from "express-validator/src/base";
-import { authDto } from "../dto/user.dto";
 
 export function userRouter(): Router {
   const userRoutes = Router();

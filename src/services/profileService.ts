@@ -3,7 +3,6 @@ import { UserModel } from "../database/models/user.model";
 import { profileChangeDto } from "../dto/profile.dto";
 import { verify } from "jsonwebtoken";
 import { writeFile } from "fs/promises";
-import { writeFileSync } from "fs";
 
 interface Profile {
   changeProfile(
