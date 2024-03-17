@@ -64,7 +64,6 @@ export function profileRouter(): Router {
             data[key] = value 
           }
         }
-        console.log(data)
         const response = await profileService.changeProfile(data, res);
         if (response !== undefined) {
           res.send(response);
